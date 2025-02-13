@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --blue: #2D68F8;
+  --black: #000000;
+  --white: #FFFFFF;
+  --white-border: #DFE4EA;
+  --black-border: #000000;
+  --transparent: #00000000;
+
+  --text-light: #637381;
+
+  --gradient-primary: #2D68F8;
+  --gradient-secondary: #E72DF8;
+
+  --transparent-panel: #D4CBFF66;
+
+  --btn-padding-x: 24px;
+  --btn-padding-y: 8px;
+}
+
+.nav-btn {
+  @apply 
+  transition-all duration-500
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[8px] text-[14px] font-[400] text-[--black] bg-[--transparent] border-[--transparent] grid place-items-center
+  hover:bg-[--transparent] hover:text-[--blue] hover:border-[--blue]
+  active:bg-[--blue] active:text-[--white];
+}
+
+.nav-btn-active {
+  @apply 
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[8px] text-[14px] font-[400] grid place-items-center
+  bg-[--blue] text-[--white];
+}
+
+.group-btn {
+  @apply 
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[8px] text-sm font-[400] text-[--white] bg-[--blue] border-[--white-border] 
+  active:bg-[--white] active:text-[--black] active:border-[--white-border]
+}
+
+.btn {
+  @apply 
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[50px] text-sm font-[400] text-[--white] bg-[--blue] border-[--blue] 
+  active:bg-[--blue] active:text-[--white] active:border-[--blue]
+}
+
+.btn-primary {
+  @apply 
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[50px] text-sm font-[400] text-[--white] bg-[--blue] border-[--blue];
+}
+
+.btn-secondary {
+  @apply 
+  border py-[--btn-padding-y] px-[--btn-padding-x] rounded-[50px] text-sm font-[400] text-[--black] bg-[--transparent] border-[--black-border];
+}
+
+.input-label {
+  @apply 
+  font-[400] text-[12px]
+  group-focus-within:text-[--blue];
+}
+
+.input {
+  @apply 
+  border-b border-[--black] p-[4px] bg-[--transparent] text-[16px] font-[400]
+  active:border-[--blue] active:text-[--blue]
+  focus:border-[--blue] focus:text-[--blue] focus:outline-none;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #2D68F8 0%, #E72DF8 100%);
+  filter: blur(74px);
+  -webkit-filter: blur(74px);
+}
